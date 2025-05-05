@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalal Cement Bricks Industries</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Logo Animation -->
+  <div id="logo-intro">
+    <video id="intro-video" autoplay muted playsinline>
+      <source src="logo_intro.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="fade-in">
+    <div class="hero-content">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <h1>Kalal Cement Bricks Industries</h1>
+      <p class="tagline">Helping in Building Dreams</p>
+      <a href="#about" class="btn">Explore More</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section fade-in">
+    <h2>About Us</h2>
+    <p>Located in Mudhol, Karnataka - 587313, we’ve been proudly serving for 11 years. Kalal Cement Bricks Industries is committed to providing high-quality cement and fly ash bricks to builders, architects, and homeowners.</p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="section fade-in">
+    <h2>Our Products</h2>
+    <div class="product-list">
+      <div class="product">
+        <h3>Cement Bricks</h3>
+        <p>Available in two different quality options for various needs.</p>
+      </div>
+      <div class="product">
+        <h3>Fly Ash Bricks</h3>
+        <p>Eco-friendly and strong, offered in two quality grades.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="location" class="section fade-in">
+    <h2>Visit Us</h2>
+    <footer>
+        <p>
+          &copy; 2024 Kalal Cement Bricks Industries | 
+          Contact: 
+          <a href="tel:9902756695">9902756695</a>, 
+          <a href="tel:8971123941">8971123941</a> | 
+          Email: 
+          <a href="mailto:prithvirajkalal83@gmail.com">prithvirajkalal83@gmail.com</a>
+        </p>
+      </footer>
+      
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d239.28111749542094!2d75.27706475520749!3d16.348580852148988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc741f283b55d13%3A0x3071759c23382272!2sKalal%20Cement%20Bricks!5e0!3m2!1sen!2sin!4v1746447262109!5m2!1sen!2sin"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  
+
+  
+
+  <script>
+    // Logo intro fade out
+window.addEventListener('load', () => {
+    const intro = document.getElementById('logo-intro');
+    setTimeout(() => {
+      intro.style.opacity = 0;
+      setTimeout(() => intro.style.display = 'none', 1000);
+    }, 3000); // 3 seconds delay
+  });
+  
+  // Scroll animation
+  const faders = document.querySelectorAll('.fade-in');
+  
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const appearOnScroll = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      appearOnScroll.unobserve(entry.target);
+    });
+  }, appearOptions);
+  
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+  
+  </script>
+</body>
+</html>
